@@ -1,0 +1,55 @@
+.grid-container {
+    display: grid;
+  }
+  
+  .study-title {
+    font-size: 24px;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .page-container {
+    width: 100vw;
+    display: grid;
+    justify-content: center;
+    direction: row;
+    gap: 20px;
+  }
+  
+  .page-content {
+    width: 800px;
+    background-color: white;
+    padding: 10px;
+  }
+  
+  .page-title {
+    width: 800px;
+    padding: 10px;
+    font-size: 34px;
+    font-weight: bolder;
+  }
+  
+  .list-container {
+    display: grid;
+    gap: 20px;
+  }
+  
+  .list-item {
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    &:hover {
+      background-color: #cfcfcf;
+    }
+  }
+  
+  .footer {
+    position: absolute;
+    bottom: 0;
+    padding: 20px;
+    text-align: center;
+    width: 100vw;
+  }
+  
