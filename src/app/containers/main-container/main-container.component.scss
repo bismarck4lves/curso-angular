@@ -1,0 +1,35 @@
+.toolbar {
+  background-color: black;
+  color: rgb(218, 167, 0);
+  width: 100%;
+}
+
+.main-container {
+  padding: 0.01em 16px;
+}
+
+.main {
+  transition: margin-left 0.4s;
+}
+
+.sidebar {
+  height: 100%;
+  width: 270px;
+  background-color: #1e1e1e;
+  position: fixed !important;
+  z-index: 1;
+  overflow: auto;
+}
+.menu-item {
+    color: white;
+    padding: 20px 20px 20px 20px;
+    border-bottom: 1px solid rgb(159, 159, 159);
+    cursor: pointer;
+    transform: 0.4s;
+    font-size: 18px;
+}
+
+
+.menu-item:hover {
+    background-color: #2e2e2e;
+}

@@ -1,13 +1,5 @@
-<div>
-  <app-box-preview
-    value="10"
-    (onSelect)="handleSelectInput()"
-  ></app-box-preview>
-  <app-box-preview
-    [value]="count"
-    (onSelect)="handleSelectOutput()"
-  ></app-box-preview>
-  <button (click)="increment()">
-    Increment {{count}}
-  </button>
+<div class="box-container">
+  <app-box-preview title="Entradas" [value]="inflows"></app-box-preview>
+  <app-box-preview title="Saídas" [value]="outflows"></app-box-preview>
+  <app-box-preview title="Saldo final" [value]="inflows - outflows"></app-box-preview>
 </div>

@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { FooService } from '../../pages/dashboard/foo.service';
 @Component({
   selector: 'app-box-preview',
   templateUrl: './box-preview.component.html',
@@ -7,22 +6,12 @@ import { FooService } from '../../pages/dashboard/foo.service';
 })
 export class BoxPreviewComponent implements OnInit {
   @Input() value?: number | string = 0;
-  @Output() onSelect = new EventEmitter();
+  @Input() title?: string = "";
 
-  constructor(private fooService: FooService) {}
+  constructor() {}
 
   ngOnInit(): void {
-    this.fooService.data.subscribe((data) => {
-    });
+  
   }
-  change() {
-    this.fooService.changeRandomData();
-  }
-  handleSelect() {
-    this.onSelect.emit();
-  }
-
-  ngOnChanges() {
-    console.log("ngOnChanges DashboardComponent")
-  }
+  
 }
