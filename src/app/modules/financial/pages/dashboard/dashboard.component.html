@@ -1,5 +1,80 @@
 <div class="box-container">
   <app-box-preview title="Entradas" [value]="inflows"></app-box-preview>
   <app-box-preview title="Saídas" [value]="outflows"></app-box-preview>
-  <app-box-preview title="Saldo final" [value]="inflows - outflows"></app-box-preview>
+  <app-box-preview
+    title="Saldo final"
+    [value]="inflows - outflows"
+  ></app-box-preview>
 </div>
+
+<button (click)="changeColor('pink')">Pink</button>
+<button (click)="changeColor('black')">Black</button>
+<div
+  [ngStyle]="{
+    background: divNgStyleColor,
+    color: 'white',
+    padding: '20px'
+  }"
+>
+  NgStyle
+</div>
+
+<div [ngClass]="divNgClass">NgClass</div>
+
+<button (click)="changeCondition()">Change</button>
+<h1 *ngIf="conditionIf; else conditionElse">Este foi um if</h1>
+
+<ng-template #conditionElse>
+  <h1>Este é o else</h1>
+</ng-template>
+
+<ul>
+  <li *ngFor="let item of options">
+    {{ item }}
+  </li>
+</ul>
+
+<ul>
+  <li *ngFor="let item of options2; let i = index">
+    {{ i }} - {{ item.value }}
+  </li>
+</ul>
+
+<ul>
+  <li *ngFor="let item of optionsObject | keyvalue">
+    Chave: {{ item.key }} - Valor: {{ item.value }}
+  </li>
+</ul>
+
+<ul>
+  <li
+    *ngFor="
+      let item of numbers;
+      let i = index;
+      let first = first;
+      let last = last;
+      let even = even;
+      let odd = odd
+    "
+  >
+    {{ i }} {{ item }}
+    <span *ngIf="first"> Primeiro </span>
+    <span *ngIf="last"> Ultimo </span>
+    <span *ngIf="even"> Par </span>
+    <span *ngIf="odd"> Impar </span>
+  </li>
+</ul>
+
+<ul>
+  <li *ngFor="let item of itemsTrackBy;  trackBy: funcTrackBy">
+    {{ item.name }}
+  </li>
+</ul>
+
+<button contained>MAIN BUTTON</button>
+
+<button class="btn">MAIN BUTTON</button>
+<button outlined>MAIN BUTTON</button>
+
+<div text>EXAMPLE NA DIV</div>
+
