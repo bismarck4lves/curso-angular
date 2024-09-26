@@ -6,11 +6,21 @@ import { Router } from '@angular/router';
   styleUrls: ['./main-container.component.scss'],
 })
 export class MainContainerComponent implements OnInit {
+  pages = [
+    {
+      path: 'financial',
+      value: 'Financeiro',
+    },
+    {
+      path: 'clients',
+      value: 'Clientes',
+    },
+  ];
   constructor(private router: Router) {}
 
   ngOnInit(): void {}
 
-  gotToFinancial() {
-    this.router.navigate(['financial']);
+  gotToPath(url: string) {
+    this.router.navigate([url]);
   }
 }

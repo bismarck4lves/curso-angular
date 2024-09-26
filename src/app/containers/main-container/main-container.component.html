@@ -1,5 +1,11 @@
 <div class="sidebar" style="width: 200px">
-  <div class="menu-item" onclick="gotToFinancial()">Financeiro</div>
+  <div
+    class="menu-item"
+    *ngFor="let item of pages"
+    (click)="gotToPath(item.path)"
+  >
+    {{ item.value }}
+  </div>
 </div>
 
 <div class="main" style="margin-left: 200px">
