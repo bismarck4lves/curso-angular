@@ -1,4 +1,4 @@
-interface ICorreios {
+export interface ICorreios {
   cep: string;
   logradouro: string;
   complemento: string;
